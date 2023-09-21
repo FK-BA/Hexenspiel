@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ocean_material_01
+  m_Shader: {fileID: 4800000, guid: 3e41c7af8af08b4439cce70902107a3f, type: 3}
+  m_Parent: {fileID: 2100000, guid: 20f7694a778e39342834bffff0eb11d9, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Addittionalfoam:
+        m_Texture: {fileID: 2800000, guid: 3e9621926cb7ef440a683d33de90a485, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamTexture:
+        m_Texture: {fileID: 2800000, guid: 5f9b6fb959d19a241b3efbcaa90b5a77, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _EdgeFoamLevel: 2.43
+    - _EdgeFoamLevelDestination: 3.64
+    - _EdgeFoamPower: 0.714
+    - _FoamOpacity: 0.6
+    - _Noiselevel: 0.0709
+    - _WaterDepth: 2.09
+    - _WaterOpacity: 0.281
+    - _WaterOrientation: 1.5
+    m_Colors:
+    - _Color: {r: 0.7880324, g: 0.7205882, b: 1, a: 1}
+    - _WaterColor: {r: 0.68122834, g: 0.7133634, b: 0.9264706, a: 1}
+  m_BuildTextureStacks: []
