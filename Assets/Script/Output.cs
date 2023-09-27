@@ -18,7 +18,7 @@ public class Output : MonoBehaviour
     public GameObject kristalleV1;
 
 
-    private SteamVR_Action_Boolean buttonPressed; // flying
+    public SteamVR_Action_Vector2 m_MoveValue = null; //add force or slow down
     private SteamVR_Action_Boolean buttonPressedHolding; // holding
 
     private String Name;
@@ -30,7 +30,7 @@ public class Output : MonoBehaviour
     {
         DateTime localDate = DateTime.Now;
         Name = System.DateTime.Now.ToString("HH-mm-ss");
-        buttonPressed = SteamVR_Input.GetBooleanAction("TouchpadPress"); //flying
+  
         buttonPressedHolding = SteamVR_Input.GetBooleanAction("GrabPinch"); //holding
     }
 
@@ -57,7 +57,7 @@ public class Output : MonoBehaviour
         rowDataTemp[11] = "X_Controller_Rotation";
         rowDataTemp[12] = "Y_Controller_Rotation";
         rowDataTemp[13] = "Z_Controller_Rotation";
-        rowDataTemp[14] = "FlyingButton"; //force button for flying
+        rowDataTemp[14] = "Y_Controller_Input"; //controller input for slow down or add force
         rowDataTemp[15] = "HoldButton"; //pick up objects
 
         rowData.Add(rowDataTemp);
@@ -119,7 +119,7 @@ public class Output : MonoBehaviour
         rowDataTemp[11] = Controller.transform.eulerAngles.x.ToString(); //Controller rotation
         rowDataTemp[12] = Controller.transform.eulerAngles.y.ToString(); //Controller rotation
         rowDataTemp[13] = Controller.transform.eulerAngles.z.ToString(); //Controller rotation
-        rowDataTemp[14] = buttonPressed.GetState(SteamVR_Input_Sources.Any) ? "pressed" : (buttonPressed.GetStateUp(SteamVR_Input_Sources.Any) ? "released" : "");
+        rowDataTemp[14] = m_MoveValue.axis.y.ToString();//Movement y Axis
         rowDataTemp[15] = buttonPressedHolding.GetState(SteamVR_Input_Sources.Any) ? "pressed" : (buttonPressedHolding.GetStateUp(SteamVR_Input_Sources.Any) ? "released" : "");
 
         rowData.Add(rowDataTemp);
